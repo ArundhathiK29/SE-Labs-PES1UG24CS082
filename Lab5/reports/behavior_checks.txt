@@ -1,0 +1,8 @@
+PASS: empty route returns zero
+PASS: SQL-like student name is stored as data
+PASS: fees sum correctly
+PASS: UTF-8 roster export
+PASS: shell-like route is printed literally
+PASS: demo exports expected R1 roster
+PASS: demo prints expected dispatch and R2 roster
+PASS: database errors propagate

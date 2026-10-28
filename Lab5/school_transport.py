@@ -3,7 +3,10 @@
 import sqlite3
 
 CONNECTION = sqlite3.connect(":memory:")
-CONNECTION.execute("CREATE TABLE riders (id INTEGER PRIMARY KEY, student TEXT, route TEXT, stop TEXT, fee INTEGER)")
+CONNECTION.execute(
+    "CREATE TABLE riders (id INTEGER PRIMARY KEY, student TEXT, "
+    "route TEXT, stop TEXT, fee INTEGER)"
+)
 
 
 def enroll_rider(student, route, stop, fee):
