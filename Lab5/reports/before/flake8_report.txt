@@ -1,0 +1,9 @@
+school_transport.py:5:80: E501 line too long (110 > 79 characters)
+school_transport.py:8:24: E231 missing whitespace after ','
+school_transport.py:8:30: E231 missing whitespace after ','
+school_transport.py:8:35: E231 missing whitespace after ','
+school_transport.py:9:80: E501 line too long (116 > 79 characters)
+school_transport.py:14:80: E501 line too long (95 > 79 characters)
+school_transport.py:23:1: E302 expected 2 blank lines, found 1
+school_transport.py:29:80: E501 line too long (98 > 79 characters)
+school_transport.py:30:5: E722 do not use bare 'except'

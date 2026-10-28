@@ -1,0 +1,23 @@
+************* Module school_transport
+school_transport.py:5:0: C0301: Line too long (110/100) (line-too-long)
+school_transport.py:9:0: C0301: Line too long (116/100) (line-too-long)
+school_transport.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+school_transport.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+school_transport.py:8:0: C0103: Function name "enrollRider" doesn't conform to snake_case naming style (invalid-name)
+school_transport.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+school_transport.py:13:0: C0103: Function name "routeRoster" doesn't conform to snake_case naming style (invalid-name)
+school_transport.py:13:23: W0613: Unused argument 'driver' (unused-argument)
+school_transport.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
+school_transport.py:17:0: C0103: Function name "exportRoster" doesn't conform to snake_case naming style (invalid-name)
+school_transport.py:18:10: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+school_transport.py:18:10: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+school_transport.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
+school_transport.py:23:0: C0103: Function name "dispatchAlert" doesn't conform to snake_case naming style (invalid-name)
+school_transport.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+school_transport.py:27:0: C0103: Function name "feeCollected" doesn't conform to snake_case naming style (invalid-name)
+school_transport.py:30:4: W0702: No exception type(s) specified (bare-except)
+school_transport.py:34:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 4.00/10
+
