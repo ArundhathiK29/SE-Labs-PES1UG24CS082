@@ -1,6 +1,6 @@
 # Lab 6: Code and Branch Coverage Analysis
 
-Student: Arundhathi K | PES1UG24CS082 | Section 5B
+Student: Arundhathi K | PES1UG24CS082 | Section 5-B
 
 Assigned project: https://github.com/SETAPESU26/L6_L7_24_pizza_order
 
@@ -44,9 +44,9 @@ The tested environment was Python 3.11.9, pytest 9.1.1, coverage.py 7.17.0.
 - `reports/` contains actual command logs and machine-readable coverage results.
 - `Lab6_PES1UG24CS082_Report.pdf` contains the analysis and test listings.
 - Two separate commits record code coverage and branch coverage work.
-- **Outstanding:** native terminal screenshots. Automated capture was unavailable.
-  See `screenshots/README.md`; command-output panels in the PDF are not screenshots.
-- Upload the completed PDF to the instructor's Google Form after adding screenshots.
+- `screenshots/code_coverage.png` and `screenshots/branch_coverage.png` show
+  the final terminal results and are included in the PDF.
+- The PDF is ready to upload to the instructor's Google Form; the form has not been submitted.
 
 Some local Python runs emitted a pyreadline3 cleanup warning after pytest exited.
 The logs retain it verbatim. Both suites exited successfully and the coverage data

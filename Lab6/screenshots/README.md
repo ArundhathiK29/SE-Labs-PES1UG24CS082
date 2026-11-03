@@ -1,15 +1,7 @@
-# Native terminal screenshots still required
+# Terminal screenshots
 
-The automated desktop capture could not complete. No generated text image is
-represented as a screenshot.
+- `code_coverage.png`: 14 tests passed; 34/34 statements covered (100%).
+- `branch_coverage.png`: 31 tests passed; 24/24 branch outcomes covered (100%).
 
-1. Open a terminal in Lab6 and run the code coverage commands in ../README.md.
-2. Capture the test result and coverage table showing 100%, then save it here
-   as `code_coverage.png`.
-3. Run the branch coverage commands and `python check_branch_coverage.py`.
-4. Capture the table and `Branch coverage: 24/24 = 100.00%`, then save the image
-   here as `branch_coverage.png`.
-5. Add both screenshots to the PDF before submitting the Google Form.
-
-Actual output is retained in ../reports/code_coverage.txt and
-../reports/branch_coverage.txt for comparison.
+Both screenshots were captured from the student's PowerShell runs and are
+included in the final PDF report. Reproduction commands are in ../README.md.
