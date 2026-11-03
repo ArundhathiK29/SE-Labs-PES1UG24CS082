@@ -1,0 +1,25 @@
+LAB 6 | PES1UG24CS082 | CODE COVERAGE
+Target: pizza_order.py
+
+> python -m coverage run --source=pizza_order --data-file=.coverage.code -m pytest CodeCoverageTest_pizza_order.py -q
+..............                                                           [100%]
+14 passed in 0.07s
+Exception ignored in: <function Console.__del__ at 0x000001FE904D04A0>
+Traceback (most recent call last):
+  File "C:\Users\karib\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyreadline3\console\console.py", line 256, in __del__
+OSError: [WinError -1073741816] Windows Error 0xc0000008
+Exit code: 0
+
+> python -m coverage report --data-file=.coverage.code -m --fail-under=90
+Name             Stmts   Miss  Cover   Missing
+----------------------------------------------
+pizza_order.py      34      0   100%
+----------------------------------------------
+TOTAL               34      0   100%
+Exit code: 0
+
+> python -m coverage json --data-file=.coverage.code -o reports/code_coverage.json
+Wrote JSON report to reports/code_coverage.json
+Exit code: 0
+
+Required minimum: 90% | PASS
