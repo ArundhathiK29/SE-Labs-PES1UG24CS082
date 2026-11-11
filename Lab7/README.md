@@ -51,9 +51,17 @@ starter. Bounds avoid processing arbitrarily large CSVs and huge integers.
 ## Evidence
 
 `evidence/` contains unedited subprocess output and execution metadata.
-`screenshots/` contains captures of that output. The consolidated PDF includes
+`screenshots/` contains browser captures of that saved output, with command,
+input, timestamp, and exit code labels. These are log-viewer captures.
+The consolidated PDF includes
 the screenshots, findings, and complete corrected source and test listings.
 Hypothesis runs 200 examples per generated property, with deterministic
 generation and its example database disabled for reproducibility.
 Passing fuzz tests are evidence for the stated properties, not a proof of all
 possible inputs.
+
+Verified on Windows with Python 3.11.9, pytest 9.1.1, and Hypothesis 6.170.15.
+The original robustness run shows **6 failed, 25 deselected**. The corrected
+suite shows **31 passed**. `python reproduce_evidence.py` re-runs the commands
+and replaces the raw logs and metadata; the supplied captures and PDF record
+the submission run. Each screenshot part covers consecutive log lines.

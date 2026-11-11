@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8"><title>Lab 7 execution evidence</title><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#f5f7fa;color:#132e45;font-family:Arial}h1{font-size:23px;margin:0 0 7px}p{font-size:14px;line-height:1.5;margin:8px 0 15px}pre{background:white;border:1px solid #c8d4de;border-left:5px solid #187c83;border-radius:5px;padding:18px;color:#162536;font:16px/1.45 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}footer{font-size:13px;margin-top:12px;color:#526779}</style><h1>03 fuzz failures</h1><p>Arundhathi K | PES1UG24CS082 | Lab 7</p><p>Command: python -m pytest test_processor.py -k no_crash -v --tb=short --color=no<br>PROCESSOR_MODULE=original.processor<br>Exit code: 1 | 2026-11-11T09:57:52.697085+05:30<br>Log lines 43-84 of 109</p><pre>E   Failing test case: test_pizza_inches_no_crash(
+E       value=None,
+E   )
+__________________________ test_split_bill_no_crash ___________________________
+test_processor.py:47: in test_split_bill_no_crash
+    def test_split_bill_no_crash(value):
+                   ^^^
+test_processor.py:48: in test_split_bill_no_crash
+    result = processor.split_bill(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:14: in split_bill
+    total, people = text.split('/')
+                    ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_split_bill_no_crash(
+E       value=None,
+E   )
+_________________________ test_toppings_text_no_crash _________________________
+test_processor.py:82: in test_toppings_text_no_crash
+    def test_toppings_text_no_crash(value):
+                   ^^^
+test_processor.py:83: in test_toppings_text_no_crash
+    result = processor.toppings_price(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:7: in toppings_price
+    total += TOPPINGS[t.strip().lower()]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ''
+E   Failing test case: test_toppings_text_no_crash(
+E       value='',  # or any other generated value
+E   )
+___________________________ test_size_text_no_crash ___________________________
+test_processor.py:88: in test_size_text_no_crash
+    def test_size_text_no_crash(value):
+                   ^^^
+test_processor.py:89: in test_size_text_no_crash
+    assert processor.pizza_inches(value) in (None, 8, 10, 12)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:11: in pizza_inches
+    return SIZES[size.strip().upper()]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ''</pre><footer>Browser capture of the saved execution log. Command output is unedited; long lines wrap.</footer>

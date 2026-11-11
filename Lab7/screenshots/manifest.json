@@ -1,0 +1,58 @@
+[
+  {
+    "name": "01_original_valid_1",
+    "source": "01_original_valid",
+    "firstLine": 1,
+    "lastLine": 8,
+    "totalLines": 8
+  },
+  {
+    "name": "02_original_invalid_1",
+    "source": "02_original_invalid",
+    "firstLine": 1,
+    "lastLine": 17,
+    "totalLines": 17
+  },
+  {
+    "name": "03_fuzz_failures_1",
+    "source": "03_fuzz_failures",
+    "firstLine": 1,
+    "lastLine": 42,
+    "totalLines": 109
+  },
+  {
+    "name": "03_fuzz_failures_2",
+    "source": "03_fuzz_failures",
+    "firstLine": 43,
+    "lastLine": 84,
+    "totalLines": 109
+  },
+  {
+    "name": "03_fuzz_failures_3",
+    "source": "03_fuzz_failures",
+    "firstLine": 85,
+    "lastLine": 109,
+    "totalLines": 109
+  },
+  {
+    "name": "04_corrected_valid_1",
+    "source": "04_corrected_valid",
+    "firstLine": 1,
+    "lastLine": 8,
+    "totalLines": 8
+  },
+  {
+    "name": "05_corrected_invalid_1",
+    "source": "05_corrected_invalid",
+    "firstLine": 1,
+    "lastLine": 8,
+    "totalLines": 8
+  },
+  {
+    "name": "06_final_tests_1",
+    "source": "06_final_tests",
+    "firstLine": 1,
+    "lastLine": 42,
+    "totalLines": 42
+  }
+]

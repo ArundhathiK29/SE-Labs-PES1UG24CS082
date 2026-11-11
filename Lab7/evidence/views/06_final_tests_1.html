@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8"><title>Lab 7 execution evidence</title><style>*{box-sizing:border-box}body{margin:0;padding:28px;background:#f5f7fa;color:#132e45;font-family:Arial}h1{font-size:23px;margin:0 0 7px}p{font-size:14px;line-height:1.5;margin:8px 0 15px}pre{background:white;border:1px solid #c8d4de;border-left:5px solid #187c83;border-radius:5px;padding:18px;color:#162536;font:16px/1.45 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}footer{font-size:13px;margin-top:12px;color:#526779}</style><h1>06 final tests</h1><p>Arundhathi K | PES1UG24CS082 | Lab 7</p><p>Command: python -m pytest test_processor.py -v --tb=short --color=no<br>Exit code: 0 | 2026-11-11T09:57:54.577125+05:30<br>Log lines 1-42 of 42</p><pre>============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 31 items
+
+test_processor.py::test_toppings_price_no_crash PASSED                   [  3%]
+test_processor.py::test_pizza_inches_no_crash PASSED                     [  6%]
+test_processor.py::test_split_bill_no_crash PASSED                       [  9%]
+test_processor.py::test_toppings_valid_sum PASSED                        [ 12%]
+test_processor.py::test_size_normalization PASSED                        [ 16%]
+test_processor.py::test_bill_valid_result PASSED                         [ 19%]
+test_processor.py::test_bill_zero_people_rejected PASSED                 [ 22%]
+test_processor.py::test_toppings_text_no_crash PASSED                    [ 25%]
+test_processor.py::test_size_text_no_crash PASSED                        [ 29%]
+test_processor.py::test_bill_text_no_crash PASSED                        [ 32%]
+test_processor.py::test_size_input_length_boundary[4096-10] PASSED       [ 35%]
+test_processor.py::test_size_input_length_boundary[4097-None] PASSED     [ 38%]
+test_processor.py::test_toppings_invalid_tokens[] PASSED                 [ 41%]
+test_processor.py::test_toppings_invalid_tokens[,] PASSED                [ 45%]
+test_processor.py::test_toppings_invalid_tokens[cheese,] PASSED          [ 48%]
+test_processor.py::test_toppings_invalid_tokens[cheese,,onion] PASSED    [ 51%]
+test_processor.py::test_toppings_invalid_tokens[tomato] PASSED           [ 54%]
+test_processor.py::test_bill_invalid_format[-1/2] PASSED                 [ 58%]
+test_processor.py::test_bill_invalid_format[10/-2] PASSED                [ 61%]
+test_processor.py::test_bill_invalid_format[1.5/2] PASSED                [ 64%]
+test_processor.py::test_bill_invalid_format[10/2/3] PASSED               [ 67%]
+test_processor.py::test_bill_invalid_format[10] PASSED                   [ 70%]
+test_processor.py::test_bill_invalid_format[/] PASSED                    [ 74%]
+test_processor.py::test_bill_invalid_format[+1/2] PASSED                 [ 77%]
+test_processor.py::test_bill_invalid_format[nan/2] PASSED                [ 80%]
+test_processor.py::test_bill_invalid_format[inf/2] PASSED                [ 83%]
+test_processor.py::test_bill_invalid_format[1_000/2] PASSED              [ 87%]
+test_processor.py::test_bill_invalid_format[9999999999999/1] PASSED      [ 90%]
+test_processor.py::test_oversized_input_rejected[oversized-toppings] PASSED [ 93%]
+test_processor.py::test_oversized_input_rejected[oversized-size] PASSED  [ 96%]
+test_processor.py::test_oversized_input_rejected[oversized-bill] PASSED  [100%]
+
+============================= 31 passed in 1.24s ==============================</pre><footer>Browser capture of the saved execution log. Command output is unedited; long lines wrap.</footer>
