@@ -1,0 +1,43 @@
+[
+  {
+    "name": "04_corrected_valid",
+    "command": [
+      "C:\\Users\\karib\\Documents\\Codex\\2026-11-11\\dr-sapna-v-m-pesu-rr\\work\\test-env\\Scripts\\python.exe",
+      "processor.py"
+    ],
+    "stdin": "cheese,olives\nM\n900/3\n",
+    "module": null,
+    "started_ist": "2026-11-11T09:57:21.154393+05:30",
+    "exit_code": 0,
+    "output_sha256": "11cf18ccdeb18f680f19e83989d73bd77d543907098831a0148956b768009e10"
+  },
+  {
+    "name": "05_corrected_invalid",
+    "command": [
+      "C:\\Users\\karib\\Documents\\Codex\\2026-11-11\\dr-sapna-v-m-pesu-rr\\work\\test-env\\Scripts\\python.exe",
+      "processor.py"
+    ],
+    "stdin": "cheese,olives\nM\n900/0\n",
+    "module": null,
+    "started_ist": "2026-11-11T09:57:21.296481+05:30",
+    "exit_code": 0,
+    "output_sha256": "5531bf6b68f7eba979c947f227b3ad6f96708fdb20602142c0c33b705a9e99ee"
+  },
+  {
+    "name": "06_final_tests",
+    "command": [
+      "C:\\Users\\karib\\Documents\\Codex\\2026-11-11\\dr-sapna-v-m-pesu-rr\\work\\test-env\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "test_processor.py",
+      "-v",
+      "--tb=short",
+      "--color=no"
+    ],
+    "stdin": null,
+    "module": null,
+    "started_ist": "2026-11-11T09:57:21.417665+05:30",
+    "exit_code": 1,
+    "output_sha256": "36ab4054da47214f509aeb1c978bc1d35220573325fbbb15754a022ef33d025f"
+  }
+]
