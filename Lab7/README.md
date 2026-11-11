@@ -53,7 +53,8 @@ starter. Bounds avoid processing arbitrarily large CSVs and huge integers.
 `evidence/` contains unedited subprocess output and execution metadata.
 `screenshots/` contains browser captures of that saved output, with command,
 input, timestamp, and exit code labels. These are log-viewer captures.
-The consolidated PDF includes
+The consolidated PDF is maintained locally for editing and separate form submission;
+PDF files are excluded from Git. The PDF includes
 the screenshots, findings, and complete corrected source and test listings.
 Hypothesis runs 200 examples per generated property, with deterministic
 generation and its example database disabled for reproducibility.
