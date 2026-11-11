@@ -1,17 +1,42 @@
-Traceback (most recent call last):
-  File "<frozen runpy>", line 189, in _run_module_as_main
-  File "<frozen runpy>", line 148, in _get_module_details
-  File "<frozen runpy>", line 112, in _get_module_details
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\pytest\__init__.py", line 8, in <module>
-    from _pytest._code import ExceptionInfo
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_code\__init__.py", line 5, in <module>
-    from .code import Code
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_code\code.py", line 41, in <module>
-    from _pytest._io import TerminalWriter
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_io\__init__.py", line 3, in <module>
-    from .terminalwriter import get_terminal_width
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_io\terminalwriter.py", line 19, in <module>
-    from ..compat import assert_never
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\compat.py", line 20, in <module>
-    import py
-ModuleNotFoundError: No module named 'py'
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 31 items
+
+test_processor.py::test_toppings_price_no_crash PASSED                   [  3%]
+test_processor.py::test_pizza_inches_no_crash PASSED                     [  6%]
+test_processor.py::test_split_bill_no_crash PASSED                       [  9%]
+test_processor.py::test_toppings_valid_sum PASSED                        [ 12%]
+test_processor.py::test_size_normalization PASSED                        [ 16%]
+test_processor.py::test_bill_valid_result PASSED                         [ 19%]
+test_processor.py::test_bill_zero_people_rejected PASSED                 [ 22%]
+test_processor.py::test_toppings_text_no_crash PASSED                    [ 25%]
+test_processor.py::test_size_text_no_crash PASSED                        [ 29%]
+test_processor.py::test_bill_text_no_crash PASSED                        [ 32%]
+test_processor.py::test_size_input_length_boundary[4096-10] PASSED       [ 35%]
+test_processor.py::test_size_input_length_boundary[4097-None] PASSED     [ 38%]
+test_processor.py::test_toppings_invalid_tokens[] PASSED                 [ 41%]
+test_processor.py::test_toppings_invalid_tokens[,] PASSED                [ 45%]
+test_processor.py::test_toppings_invalid_tokens[cheese,] PASSED          [ 48%]
+test_processor.py::test_toppings_invalid_tokens[cheese,,onion] PASSED    [ 51%]
+test_processor.py::test_toppings_invalid_tokens[tomato] PASSED           [ 54%]
+test_processor.py::test_bill_invalid_format[-1/2] PASSED                 [ 58%]
+test_processor.py::test_bill_invalid_format[10/-2] PASSED                [ 61%]
+test_processor.py::test_bill_invalid_format[1.5/2] PASSED                [ 64%]
+test_processor.py::test_bill_invalid_format[10/2/3] PASSED               [ 67%]
+test_processor.py::test_bill_invalid_format[10] PASSED                   [ 70%]
+test_processor.py::test_bill_invalid_format[/] PASSED                    [ 74%]
+test_processor.py::test_bill_invalid_format[+1/2] PASSED                 [ 77%]
+test_processor.py::test_bill_invalid_format[nan/2] PASSED                [ 80%]
+test_processor.py::test_bill_invalid_format[inf/2] PASSED                [ 83%]
+test_processor.py::test_bill_invalid_format[1_000/2] PASSED              [ 87%]
+test_processor.py::test_bill_invalid_format[9999999999999/1] PASSED      [ 90%]
+test_processor.py::test_oversized_input_rejected[oversized-toppings] PASSED [ 93%]
+test_processor.py::test_oversized_input_rejected[oversized-size] PASSED  [ 96%]
+test_processor.py::test_oversized_input_rejected[oversized-bill] PASSED  [100%]
+
+============================= 31 passed in 1.24s ==============================

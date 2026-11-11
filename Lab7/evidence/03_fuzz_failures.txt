@@ -1,17 +1,109 @@
-Traceback (most recent call last):
-  File "<frozen runpy>", line 189, in _run_module_as_main
-  File "<frozen runpy>", line 148, in _get_module_details
-  File "<frozen runpy>", line 112, in _get_module_details
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\pytest\__init__.py", line 8, in <module>
-    from _pytest._code import ExceptionInfo
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_code\__init__.py", line 5, in <module>
-    from .code import Code
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_code\code.py", line 41, in <module>
-    from _pytest._io import TerminalWriter
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_io\__init__.py", line 3, in <module>
-    from .terminalwriter import get_terminal_width
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\_io\terminalwriter.py", line 19, in <module>
-    from ..compat import assert_never
-  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Lib\site-packages\_pytest\compat.py", line 20, in <module>
-    import py
-ModuleNotFoundError: No module named 'py'
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\work\test-env\Scripts\python.exe
+cachedir: .pytest_cache
+hypothesis profile 'default'
+rootdir: C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7
+configfile: pytest.ini
+plugins: hypothesis-6.170.15
+collecting ... collected 31 items / 25 deselected / 6 selected
+
+test_processor.py::test_toppings_price_no_crash FAILED                   [ 16%]
+test_processor.py::test_pizza_inches_no_crash FAILED                     [ 33%]
+test_processor.py::test_split_bill_no_crash FAILED                       [ 50%]
+test_processor.py::test_toppings_text_no_crash FAILED                    [ 66%]
+test_processor.py::test_size_text_no_crash FAILED                        [ 83%]
+test_processor.py::test_bill_text_no_crash FAILED                        [100%]
+
+================================== FAILURES ===================================
+________________________ test_toppings_price_no_crash _________________________
+test_processor.py:28: in test_toppings_price_no_crash
+    def test_toppings_price_no_crash(value):
+                   ^^^
+test_processor.py:29: in test_toppings_price_no_crash
+    result = processor.toppings_price(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:6: in toppings_price
+    for t in toppings_csv.split(','):
+             ^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_toppings_price_no_crash(
+E       value=None,
+E   )
+_________________________ test_pizza_inches_no_crash __________________________
+test_processor.py:39: in test_pizza_inches_no_crash
+    def test_pizza_inches_no_crash(value):
+                   ^^^
+test_processor.py:43: in test_pizza_inches_no_crash
+    assert processor.pizza_inches(value) == expected
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:11: in pizza_inches
+    return SIZES[size.strip().upper()]
+                 ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'strip'
+E   Failing test case: test_pizza_inches_no_crash(
+E       value=None,
+E   )
+__________________________ test_split_bill_no_crash ___________________________
+test_processor.py:47: in test_split_bill_no_crash
+    def test_split_bill_no_crash(value):
+                   ^^^
+test_processor.py:48: in test_split_bill_no_crash
+    result = processor.split_bill(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:14: in split_bill
+    total, people = text.split('/')
+                    ^^^^^^^^^^
+E   AttributeError: 'NoneType' object has no attribute 'split'
+E   Failing test case: test_split_bill_no_crash(
+E       value=None,
+E   )
+_________________________ test_toppings_text_no_crash _________________________
+test_processor.py:82: in test_toppings_text_no_crash
+    def test_toppings_text_no_crash(value):
+                   ^^^
+test_processor.py:83: in test_toppings_text_no_crash
+    result = processor.toppings_price(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:7: in toppings_price
+    total += TOPPINGS[t.strip().lower()]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ''
+E   Failing test case: test_toppings_text_no_crash(
+E       value='',  # or any other generated value
+E   )
+___________________________ test_size_text_no_crash ___________________________
+test_processor.py:88: in test_size_text_no_crash
+    def test_size_text_no_crash(value):
+                   ^^^
+test_processor.py:89: in test_size_text_no_crash
+    assert processor.pizza_inches(value) in (None, 8, 10, 12)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:11: in pizza_inches
+    return SIZES[size.strip().upper()]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: ''
+E   Failing test case: test_size_text_no_crash(
+E       value='',  # or any other generated value
+E   )
+___________________________ test_bill_text_no_crash ___________________________
+test_processor.py:93: in test_bill_text_no_crash
+    def test_bill_text_no_crash(value):
+                   ^^^
+test_processor.py:94: in test_bill_text_no_crash
+    result = processor.split_bill(value)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+original\processor.py:14: in split_bill
+    total, people = text.split('/')
+    ^^^^^^^^^^^^^
+E   ValueError: not enough values to unpack (expected 2, got 1)
+E   Failing test case: test_bill_text_no_crash(
+E       value='',  # or any other generated value
+E   )
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_toppings_price_no_crash - AttributeError: 'Non...
+FAILED test_processor.py::test_pizza_inches_no_crash - AttributeError: 'NoneT...
+FAILED test_processor.py::test_split_bill_no_crash - AttributeError: 'NoneTyp...
+FAILED test_processor.py::test_toppings_text_no_crash - KeyError: ''
+FAILED test_processor.py::test_size_text_no_crash - KeyError: ''
+FAILED test_processor.py::test_bill_text_no_crash - ValueError: not enough va...
+====================== 6 failed, 25 deselected in 1.10s =======================
