@@ -1,0 +1,8 @@
+==== Running toppings_price ====
+Enter toppings as CSV (e.g. cheese,olives): Toppings Price: 70
+
+==== Running pizza_inches ====
+Enter pizza size (S/M/L): Size in Inches: 10
+
+==== Running split_bill ====
+Enter total and people (e.g. 900/3): Per Person: 300.0

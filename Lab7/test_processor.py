@@ -37,7 +37,9 @@ def test_toppings_price_no_crash(value):
 
 @given(arbitrary_input)
 def test_pizza_inches_no_crash(value):
-    expected = SIZES.get(value.strip().upper()) if isinstance(value, str) else None
+    expected = None
+    if isinstance(value, str) and len(value) <= 4096:
+        expected = SIZES.get(value.strip().upper())
     assert processor.pizza_inches(value) == expected
 
 
@@ -76,6 +78,28 @@ def test_bill_zero_people_rejected(total):
     assert processor.split_bill(f"{total}/0") is None
 
 
+@given(st.text())
+def test_toppings_text_no_crash(value):
+    result = processor.toppings_price(value)
+    assert result is None or isinstance(result, int) and result >= 0
+
+
+@given(st.text())
+def test_size_text_no_crash(value):
+    assert processor.pizza_inches(value) in (None, 8, 10, 12)
+
+
+@given(st.text())
+def test_bill_text_no_crash(value):
+    result = processor.split_bill(value)
+    assert result is None or isinstance(result, float) and result >= 0
+
+
+@pytest.mark.parametrize("length,expected", [(4096, 10), (4097, None)])
+def test_size_input_length_boundary(length, expected):
+    assert processor.pizza_inches(" " * (length - 1) + "M") == expected
+
+
 @pytest.mark.parametrize("text", ["", ",", "cheese,", "cheese,,onion", "tomato"])
 def test_toppings_invalid_tokens(text):
     assert processor.toppings_price(text) is None
@@ -91,6 +115,6 @@ def test_bill_invalid_format(text):
     ("toppings_price", "cheese," * 1000),
     ("pizza_inches", "M" * 5000),
     ("split_bill", "9" * 5000 + "/1"),
-])
+], ids=["oversized-toppings", "oversized-size", "oversized-bill"])
 def test_oversized_input_rejected(function, text):
     assert getattr(processor, function)(text) is None

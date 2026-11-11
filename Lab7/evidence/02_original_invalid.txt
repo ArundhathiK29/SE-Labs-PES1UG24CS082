@@ -1,0 +1,17 @@
+==== Running toppings_price ====
+Enter toppings as CSV (e.g. cheese,olives): Toppings Price: 70
+
+==== Running pizza_inches ====
+Enter pizza size (S/M/L): Size in Inches: 10
+
+==== Running split_bill ====
+Enter total and people (e.g. 900/3): Traceback (most recent call last):
+  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7\original\processor.py", line 34, in <module>
+    main()
+  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7\original\processor.py", line 30, in main
+    result = split_bill(user_input)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\karib\Documents\Codex\2026-11-11\dr-sapna-v-m-pesu-rr\outputs\Lab7\original\processor.py", line 15, in split_bill
+    return round(int(total) / int(people), 2)
+                 ~~~~~~~~~~~^~~~~~~~~~~~~
+ZeroDivisionError: division by zero
